@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student_Info"
+    android:background="@drawable/bb"
+    >
+
+    <LinearLayout
+        android:id="@+id/lglg"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="40px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="THÔNG TIN SINH VIÊN"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/un"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/layoutimage"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtusername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:ems="10"
+            android:hint="Mã số sinh viên"
+            android:inputType="number"
+            android:paddingLeft="50px"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/un"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:ems="10"
+            android:hint="Họ và tên "
+            android:inputType="textPersonName"
+            android:paddingLeft="50px"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gt"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/pass"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rdgrsex"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checkedButton="@id/rdbtnmale"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdbtnmale"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25px"
+                android:text="Nam"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:useMaterialThemeColors="false" />
+
+            <RadioButton
+                android:id="@+id/rdbtnfemale"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25px"
+                android:text="Nữ"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spinnerkhoa"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/gt"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spingrade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:paddingLeft="50px"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/spinnerkhoa"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="Lưu"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@android:color/holo_orange_dark" />
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoText="false"
+            android:background="@drawable/btn_bg"
+            android:freezesText="false"
+            android:text="Làm lại"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@android:color/holo_orange_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutimage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/lglg"
+        android:layout_marginTop="40px"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avapic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/noavatar"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2.5dp" />
+    </LinearLayout>
+
+    </RelativeLayout>

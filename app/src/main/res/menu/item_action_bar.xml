@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/add"
+        android:title="Thêm"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/menu_del"
+        android:icon="@drawable/del"
+        android:title="Xóa"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/menu_edit"
+        android:icon="@drawable/edit"
+        android:title="Sửa"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/menu_exit"
+        android:icon="@drawable/exit"
+        android:title="Thoát"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/menu_his"
+        android:icon="@drawable/his"
+        android:title="Lịch sử"
+        app:showAsAction="always|withText" />
+</menu>

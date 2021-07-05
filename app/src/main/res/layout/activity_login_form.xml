@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aa"
+    tools:context=".LoginForm">
+
+    <LinearLayout
+        android:id="@+id/lglg"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="200px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="ĐĂNG NHẬP"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/un"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/lglg"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:paddingLeft="100px"
+        android:paddingRight="100px">
+
+        <EditText
+            android:id="@+id/txtusername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:ems="10"
+            android:hint="Tên tài khoản"
+            android:inputType="textPersonName|text"
+            android:paddingLeft="50px"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/un"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:paddingLeft="100px"
+        android:paddingRight="100px">
+
+        <EditText
+            android:id="@+id/txtpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:drawableLeft="@drawable/ic_baseline_gpp_good_24"
+            android:ems="10"
+            android:hint="Mật khẩu"
+            android:inputType="textPersonName|textPassword"
+            android:paddingLeft="50px"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:layout_below="@id/checkRemember"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:paddingLeft="100px"
+        android:paddingRight="100px">
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="Đăng nhập"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@android:color/background_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/forgotpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:paddingLeft="100px"
+        android:paddingRight="100px">
+
+        <TextView
+            android:id="@+id/forgotpassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Quên mật khẩu?"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/creatacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:paddingLeft="100px"
+        android:paddingRight="100px">
+
+        <TextView
+            android:id="@+id/noaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bạn chưa có tài khoản?"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tạo ngay!"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_below="@id/forgotpass"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="100px"
+        android:paddingRight="100px">
+
+        <CheckBox
+            android:id="@+id/remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Duy trì đăng nhập"
+            android:textColor="@color/white"
+            android:textColorLink="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>
